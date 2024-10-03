@@ -1,0 +1,16 @@
+tc001:
+  login:
+    username: docxed684563520@gmail.com
+    password: Test123456%
+  search:
+    keyword: phone
+  user_delivery:
+    name: docxed
+    surname: ocx
+    address: 119/818 saimai
+    phone: 0882923741
+  credit_card:
+    number: 4111111111111111
+    expiry: 04/2026
+    cvc: 215
+    owner: Docxesd Xedddz

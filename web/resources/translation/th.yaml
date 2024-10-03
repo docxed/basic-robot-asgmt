@@ -1,0 +1,21 @@
+home_translation:
+  ok: OK
+  logout: Logout
+  next: Next
+register_translation:
+  sign_up: Sign up
+  action_sign_up: SIGNUP
+login_translation:
+  action_login: Login
+search_translation:
+  input_search_text: input search text
+  add_to_cart: Add to cart
+checkout_translation:
+  pay: PAY
+  select_payment_method: Select Payment Method
+  payment_details: Payment Details
+  confirm_payment: Confirm Payment
+  payment_complete: Payment Complete
+myorder_translation:
+  my_order: My Order
+  preparing: Preparing
