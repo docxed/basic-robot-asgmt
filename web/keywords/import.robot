@@ -4,6 +4,7 @@ Variables    ../resources/testdata/testdata.yaml
 Variables    ../resources/translation/th.yaml
 
 Library    SeleniumLibrary
+Library    String
 
 Resource    ./common.robot
 

@@ -17,8 +17,10 @@ Submit Pay
     SeleniumLibrary.Click Button    locator=${checkout_locator.button_pay}
 
 Select Payment Method
+    [Arguments]    ${payment_method}
     SeleniumLibrary.Wait Until Element Is Visible    locator=${checkout_locator.h1_select_payment_method}
-    SeleniumLibrary.Click Element    locator=${checkout_locator.radio_credit_card}
+    ${input_radio_locator}    String.Replace String    ${checkout_locator.radio_payment_method}    %payment_method%    ${payment_method}
+    SeleniumLibrary.Click Element    locator=${input_radio_locator}
     SeleniumLibrary.Click Button    locator=${checkout_locator.button_next}
 
 Input Payment Details
@@ -34,7 +36,7 @@ Submit Payment
     home_page.Confirm Action
     SeleniumLibrary.Wait Until Element Is Visible    locator=${checkout_locator.div_payment_complete}
 
-Verify Checkout
+Verify That Order Should Be Prepared
     home_page.Open User Menu
     SeleniumLibrary.Wait Until Element Is Visible    locator=${checkout_locator.div_my_order}
     SeleniumLibrary.Click Element    locator=${checkout_locator.div_preparing}
