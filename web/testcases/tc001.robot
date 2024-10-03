@@ -6,6 +6,7 @@ Suite Teardown    common.Close Browser
 
 *** Test Cases ***
 TC_001 Register New User
+    [Tags]    register
     register_feature.Register User    username=${tc001.login.username}    password=${tc001.login.password}    confirm_password=${tc001.login.password}
     home_page.Logout
 
