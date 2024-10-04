@@ -1,5 +1,5 @@
 run
 
 ```bash
-robot -d results -v env:uat testcases/tc001.robot
+robot -d results -v ENV:uat testcases/tc001.robot
 ```
