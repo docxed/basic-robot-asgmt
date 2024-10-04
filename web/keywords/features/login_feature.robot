@@ -2,8 +2,8 @@
 Resource    ../import.robot
 
 *** Keywords ***
-Login User
+Login user
     [Arguments]    ${username}    ${password}
-    login_page.Open Login Page
-    login_page.Input Login    username=${username}    password=${password}
-    login_page.Submit Login
+    login_page.Open login page
+    login_page.Input login    username=${username}    password=${password}
+    login_page.Submit login

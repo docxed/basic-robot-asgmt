@@ -2,9 +2,9 @@
 Resource    ../import.robot
 
 *** Keywords ***
-Register User
+Register user
     [Arguments]    ${username}    ${password}    ${confirm_password}
-    register_page.Open Register Page
-    register_page.Input Register    username=${username}    password=${password}    confirm_password=${confirm_password}
-    register_page.Submit Register
+    register_page.Open register page
+    register_page.Input register    username=${username}    password=${password}    confirm_password=${confirm_password}
+    register_page.Submit register
     

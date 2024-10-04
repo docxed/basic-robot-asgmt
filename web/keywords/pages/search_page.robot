@@ -2,19 +2,19 @@
 Resource    ../import.robot
 
 *** Keywords ***
-Product Search
+Product search
     [Arguments]    ${search_text}
-    SeleniumLibrary.Wait Until Element Is Visible    locator=${search_locator.input_search_text}
-    SeleniumLibrary.Input Text    locator=${search_locator.input_search_text}   text=${search_text}
-    SeleniumLibrary.Click Button    locator=${search_locator.button_search}
-    SeleniumLibrary.Wait Until Element Is Visible    locator=${search_locator.product_result_list}
+    SeleniumLibrary.Wait until element is visible    locator=${search_locator.input_search_text}
+    SeleniumLibrary.Input text    locator=${search_locator.input_search_text}   text=${search_text}
+    SeleniumLibrary.Click button    locator=${search_locator.button_search}
+    SeleniumLibrary.Wait until element is visible    locator=${search_locator.product_result_list}
     
-Open Product Detail
+Open product detail
     [Arguments]    ${product_name}
-    ${product_locator}    String.Replace String    ${search_locator.product_name}    %product_name%    ${product_name}
-    SeleniumLibrary.Click Element    locator=${product_locator}
-    SeleniumLibrary.Wait Until Element Is Visible    locator=${search_locator.button_add_to_cart}
+    ${product_locator}    String.Replace string    ${search_locator.product_name}    %product_name%    ${product_name}
+    SeleniumLibrary.Click element    locator=${product_locator}
+    SeleniumLibrary.Wait until element is visible    locator=${search_locator.button_add_to_cart}
     
-Add Product To Cart
-    SeleniumLibrary.Click Button    locator=${search_locator.button_add_to_cart}
-    home_page.Confirm Action
+Add product to cart
+    SeleniumLibrary.Click button    locator=${search_locator.button_add_to_cart}
+    home_page.Confirm action

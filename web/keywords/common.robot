@@ -2,10 +2,11 @@
 Resource    ./import.robot
 
 *** Keywords ***
-Open Browser And Maximize
+Open browser and maximize
     [Arguments]    ${url}
-    SeleniumLibrary.Open Browser    url=${url}    browser=gc
-    SeleniumLibrary.Maximize Browser Window
+    SeleniumLibrary.Open browser    url=${url}    browser=gc
+    SeleniumLibrary.Maximize browser window
+    # Set Selenium Speed    .2s    Speed When Running Tests
 
-Close Browser
-    SeleniumLibrary.Close Browser
+Close browser
+    SeleniumLibrary.Close browser
