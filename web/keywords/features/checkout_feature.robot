@@ -9,7 +9,5 @@ Fill delivery info and select payment method and pay
     checkout_page.Submit pay
     checkout_page.Select payment method    payment_method=${payment_method}
     checkout_page.Input payment details    credit_card_number=${credit_card_number}    credit_card_expiry=${credit_card_expiry}    credit_card_cvc=${credit_card_cvc}    credit_card_owner=${credit_card_owner}
-    checkout_page.Submit payment
-
-Verify that order should be prepared
-    checkout_page.Verify that order should be prepared
+    ${order_id}    checkout_page.Submit payment
+    Return from keyword    ${order_id}
