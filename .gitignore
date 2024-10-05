@@ -1,11 +1,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/robotframework,visualstudiocode,windows,macos,python,virtualenv,linux
 # Edit at https://www.toptal.com/developers/gitignore?templates=robotframework,visualstudiocode,windows,macos,python,virtualenv,linux
 
-# results/
-# log.html
-# report.html
-# output.xml
-# selenium-screenshot-*.png
+results/
+log.html
+report.html
+output.xml
+selenium-screenshot-*.png
+.pabotsuitenames
 
 ### Linux ###
 *~
