@@ -8,6 +8,7 @@ Verify order status
     SeleniumLibrary.Wait until element is visible    ${verify_locator.text_my_order}
     SeleniumLibrary.Wait until element is visible    ${status_locator}
     SeleniumLibrary.Click element    ${status_locator}
+    SeleniumLibrary.Wait until element is visible    ${verify_locator.order_table_td_1}
     
     @{elements_of_order_table}    SeleniumLibrary.Get webelements    locator=${verify_locator.order_table_td_1}
     ${found}    Set variable    ${FALSE}

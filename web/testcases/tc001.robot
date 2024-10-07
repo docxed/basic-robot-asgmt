@@ -18,6 +18,4 @@ TC_002 Login search checkout verify and logout
     ...    payment_method=${tc001.payment_method.credit_card}
     ...    credit_card_number=${tc001.credit_card.number}    credit_card_expiry=${tc001.credit_card.expiry}    credit_card_cvc=${tc001.credit_card.cvc}    credit_card_owner=${tc001.credit_card.owner}
     verify_feature.Verify that order should be pending    order_id=${order_id}
-    # BuiltIn.Sleep    time_=40s
-    # verify_feature.Verify that order should be prepared    order_id=${order_id}
     home_page.Logout

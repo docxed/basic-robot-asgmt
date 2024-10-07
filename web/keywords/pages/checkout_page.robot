@@ -36,7 +36,7 @@ Submit payment
     home_page.Confirm action
     SeleniumLibrary.Wait until element is visible    locator=${checkout_locator.text_payment_complete}
     SeleniumLibrary.Wait until element is visible    locator=${checkout_locator.text_success_description}
-    ${order_description}    Get text    locator=/${checkout_locator.text_success_description}
+    ${order_description}    Get text    locator=${checkout_locator.text_success_description}
     @{order_description_split}    String.Split string    ${order_description}    \n
     @{order_id_split}    String.Split string    ${order_description_split}[0]    :
     ${order_id}    Set variable    ${order_id_split}[1]
