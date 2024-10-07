@@ -1,6 +1,3 @@
-*** Settings ***
-Resource    ../../keywords/import.robot
-
 *** Variables ***
 ${register_locator.button_signup}    xpath=//button[span[text()='${register_translation.sign_up}']]
 ${register_locator.input_username}    id=basic_username

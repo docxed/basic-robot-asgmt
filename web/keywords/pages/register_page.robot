@@ -1,6 +1,3 @@
-*** Settings ***
-Resource    ../import.robot
-
 *** Keywords ***
 Open register page
     home_page.Open user menu
@@ -8,12 +5,20 @@ Open register page
     SeleniumLibrary.Click button    locator=${register_locator.button_signup}
     SeleniumLibrary.Wait until element is visible    locator=${register_locator.button_action_signup}
 
-Input register
-    [Arguments]    ${username}    ${password}   ${confirm_password}
-    SeleniumLibrary.Input text    locator=${register_locator.input_username}    text=${username}
-    SeleniumLibrary.Input password    locator=${register_locator.input_password}    password=${password}
-    SeleniumLibrary.Input password    locator=${register_locator.input_confirm_password}    password=${confirm_password}
+Input username
+    [Arguments]    ${username}
+    common.Wait until element is visible and input text    locator=${register_locator.input_username}    text=${username}
 
-Submit register
-    SeleniumLibrary.Click button    locator=${register_locator.button_action_signup}
-    home_page.Confirm action
+Input password
+    [Arguments]    ${password}
+    common.Wait until element is visible and input text    locator=${register_locator.input_password}    text=${password}
+
+Input confirm password
+    [Arguments]    ${confirm_password}
+    common.Wait until element is visible and input text    locator=${register_locator.input_confirm_password}    text=${confirm_password}
+
+Submit register button
+    common.Wait until element is visible and click button    locator=${register_locator.button_action_signup}
+
+
+

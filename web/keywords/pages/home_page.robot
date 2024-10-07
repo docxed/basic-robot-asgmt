@@ -1,10 +1,11 @@
-*** Settings ***
-Resource    ../import.robot
-
 *** Keywords ***
+Open home menu
+    SeleniumLibrary.Wait until element is visible    locator=${home_locator.menu_home}
+    SeleniumLibrary.Click element    locator=${home_locator.menu_home}
+
 Open user menu
     SeleniumLibrary.Wait until element is visible    locator=${home_locator.menu_user}
-    SeleniumLibrary.Click element    locator=${home_locator.menu_user} 
+    SeleniumLibrary.Click element    locator=${home_locator.menu_user}
 
 Open shopping cart
     SeleniumLibrary.Wait until element is visible    locator=${home_locator.menu_cart}

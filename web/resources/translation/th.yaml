@@ -18,5 +18,9 @@ checkout_translation:
   payment_complete: Payment Complete
 myorder_translation:
   my_order: My Order
-  pending_payment: Pending payment
-  preparing: Preparing
+  order_table:
+    column:
+      order_id: Order ID
+  order_status:
+    pending_payment: Pending payment
+    preparing: Preparing
