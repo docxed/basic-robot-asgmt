@@ -7,7 +7,7 @@ ${product_checkout_locator.input_address_address}    id=form_item_address
 ${product_checkout_locator.input_address_phone}    id=form_item_phone
 
 ${product_checkout_locator.h1_text_select_payment_method}    xpath=//h1[text()='${checkout_translation.select_payment_method}']
-${product_checkout_locator.radio_payment_method}    xpath=//input[@type='radio' and @value='%payment_method%']
+${product_checkout_locator.radio_payment_method}    xpath=//div[contains(@class, 'radio-group')]//input[@value='%payment_method%']/parent::span/following-sibling::span
 ${product_checkout_locator.button_next}    xpath=//button[span[text()='${home_translation.next}']]
 
 ${product_checkout_locator.h1_text_payment_details}    xpath=//h1[text()='${checkout_translation.payment_details}']
@@ -17,5 +17,4 @@ ${product_checkout_locator.input_credit_card_cvc}    id=basic_cvc
 ${product_checkout_locator.input_credit_card_owner}    id=basic_owner
 
 ${product_checkout_locator.button_confirm_payment}    xpath=//button[span[text()='${checkout_translation.confirm_payment}']]
-${product_checkout_locator.text_payment_complete}    xpath=//div[text()=' ${checkout_translation.payment_complete} ']
 ${product_checkout_locator.text_success_description}    xpath=//div[contains(@class, 'success-description')]

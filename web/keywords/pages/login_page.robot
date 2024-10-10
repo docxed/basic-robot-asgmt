@@ -1,6 +1,5 @@
 *** Keywords ***
-Open login page
-    home_page.Open user menu
+Wait login page
     SeleniumLibrary.Wait until element is visible    locator=${login_locator.button_action_login}
     
 Input username

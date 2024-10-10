@@ -1,8 +1,8 @@
 *** Keywords ***
-Open register page
-    home_page.Open user menu
-    SeleniumLibrary.Wait until element is visible    locator=${register_locator.button_signup}
-    SeleniumLibrary.Click button    locator=${register_locator.button_signup}
+Click register button on login page
+    common.Wait until element is visible and click button    locator=${register_locator.button_signup}
+
+Wait register page
     SeleniumLibrary.Wait until element is visible    locator=${register_locator.button_action_signup}
 
 Input username

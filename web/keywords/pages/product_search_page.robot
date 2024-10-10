@@ -1,6 +1,5 @@
 *** Keywords ***
-Open product search page
-    home_page.Open home menu
+Wait product search page
     SeleniumLibrary.Wait until element is visible    locator=${product_search_locator.input_search_text}
 
 Input search text
@@ -9,12 +8,15 @@ Input search text
 
 Submit search button
     common.Wait until element is visible and click button    locator=${product_search_locator.button_search}
+
+Wait product result list
     SeleniumLibrary.Wait until element is visible    locator=${product_search_locator.product_result_list}
 
 Open product detail
     [Arguments]    ${product_name}
-    ${product_locator}    String.Replace string    ${product_search_locator.product_name}    %product_name%    ${product_name}
-    SeleniumLibrary.Click element    locator=${product_locator}
+    common.Replace locator string and wait until element is visible and click button    locator=${product_search_locator.product_name}    search_for=%product_name%    replace_with=${product_name}
+
+Wait product detail page
     SeleniumLibrary.Wait until element is visible    locator=${product_search_locator.button_add_to_cart}
 
 Add product to cart

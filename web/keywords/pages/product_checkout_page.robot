@@ -1,6 +1,5 @@
 *** Keywords ***
-Open checkout page
-    home_page.Open shopping cart
+Wait checkout page
     SeleniumLibrary.Wait until element is visible    locator=${product_checkout_locator.product_detail}
 
 Input user address name
@@ -21,15 +20,18 @@ Input user address phone
 
 Submit pay button
     common.Wait until element is visible and click button    locator=${product_checkout_locator.button_pay}
+
+Wait select payment method
     SeleniumLibrary.Wait until element is visible    locator=${product_checkout_locator.h1_text_select_payment_method}
 
 Select payment method
     [Arguments]    ${payment_method}
-    ${input_radio_locator}    String.Replace string    ${product_checkout_locator.radio_payment_method}    %payment_method%    ${payment_method}
-    SeleniumLibrary.Click element    locator=${input_radio_locator}
+    common.Replace locator string and wait until element is visible and click element    locator=${product_checkout_locator.radio_payment_method}    search_for=%payment_method%    replace_with=${payment_method}
     
 Submit next button
     common.Wait until element is visible and click button    locator=${product_checkout_locator.button_next}
+
+Wait payment details
     SeleniumLibrary.Wait until element is visible    locator=${product_checkout_locator.h1_text_payment_details}
 
 Input payment details credit card number
@@ -50,12 +52,16 @@ Input payment details credit card owner
 
 Submit payment button
     common.Wait until element is visible and click button    locator=${product_checkout_locator.button_confirm_payment}
-    home_page.Confirm action
-    SeleniumLibrary.Wait until element is visible    locator=${product_checkout_locator.text_payment_complete}
+    
+Wait payment complete
     SeleniumLibrary.Wait until element is visible    locator=${product_checkout_locator.text_success_description}
 
-Get order id from success description
+Get order success description
     ${order_description}    SeleniumLibrary.Get text    locator=${product_checkout_locator.text_success_description}
+    BuiltIn.Return from keyword    ${order_description}
+    
+Get order id from success description
+    [Arguments]    ${order_description}
     @{order_description_split}    String.Split string    ${order_description}    \n
     @{order_id_split}    String.Split string    ${order_description_split}[0]    :
     ${order_id}    String.Strip string    ${order_id_split}[1]

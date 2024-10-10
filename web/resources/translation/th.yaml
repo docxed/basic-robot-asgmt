@@ -15,7 +15,6 @@ checkout_translation:
   select_payment_method: Select Payment Method
   payment_details: Payment Details
   confirm_payment: Confirm Payment
-  payment_complete: Payment Complete
 myorder_translation:
   my_order: My Order
   order_table:
