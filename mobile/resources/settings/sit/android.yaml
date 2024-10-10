@@ -1,0 +1,9 @@
+application_info:
+  remote_url: http://localhost:4723
+  platformName: android
+  platformVersion: "12"
+  deviceName: emulator-5554
+  appPackage: com.saucelabs.mydemoapp.android
+  appActivity: com.saucelabs.mydemoapp.android.view.activities.SplashActivity
+  automationName: UiAutomator2
+default_tap_duration: 500

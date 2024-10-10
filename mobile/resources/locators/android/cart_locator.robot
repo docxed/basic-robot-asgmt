@@ -1,0 +1,2 @@
+*** Variables ***
+${cart_locator.quantity_per_product}    xpath=//android.widget.TextView[@resource-id="com.saucelabs.mydemoapp.android:id/titleTV" and @text="%product_name%"]/parent::android.view.ViewGroup/following-sibling::android.widget.LinearLayout//android.widget.TextView[@resource-id="com.saucelabs.mydemoapp.android:id/noTV"]

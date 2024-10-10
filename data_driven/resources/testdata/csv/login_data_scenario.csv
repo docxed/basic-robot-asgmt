@@ -1,0 +1,7 @@
+*** Test Cases ***,${username},${password},${expect_mesage}
+Test 1 Login successfully,docxed1199806232520@gmail.com,Test123456%,Login successfully
+Test 2 Login failed,"dasdaa,ass",Test123456%,Login Failed
+Test 3 Login failed,,asdasd,Login Failed
+Test 4 Login failed,dddlxxxx,,Login Failed
+Test 5 Login successfully,docxed13214843142520@gmail.com,Test123456%,Login successfully
+Test 6 Login failed,,,Login Failed

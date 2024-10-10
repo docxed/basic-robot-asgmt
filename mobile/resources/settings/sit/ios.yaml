@@ -1,0 +1,9 @@
+application_info:
+  remote_url: http://localhost:4723
+  platformName: ios
+  platformVersion: "18.0"
+  deviceName: iPhone 13
+  udid: CA927705-6FE4-4528-B803-429EFC277103
+  automationName: xcuitest
+  app: com.saucelabs.mydemo.app.ios
+default_tap_duration: 500
