@@ -2,13 +2,17 @@
 Close application
     AppiumLibrary.Close application
 
-Wait until element is visible and tap
-    [Arguments]    ${locator}    ${duration}=${default_tap_duration}    
-    AppiumLibrary.Wait until element is visible    locator=${locator}
+Tap
+    [Arguments]    ${locator}    ${duration}=${default_tap_duration}
     &{location}    AppiumLibrary.Get element location    locator=${locator}
     @{first_finger}    BuiltIn.Create list    ${location}[x]    ${location}[y]
     @{finger_positions}    BuiltIn.Create list    ${first_finger}    
     AppiumLibrary.Tap with positions    ${duration}    @{finger_positions}
+
+Wait until element is visible and tap
+    [Arguments]    ${locator}    ${duration}=${default_tap_duration}    
+    AppiumLibrary.Wait until element is visible    locator=${locator}
+    Tap    ${locator}    ${duration}
 
 Wait until element is visible and get text
     [Arguments]    ${locator}
